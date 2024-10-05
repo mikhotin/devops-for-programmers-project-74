@@ -1,0 +1,35 @@
+name: app
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    environment:
+      NODE_ENV: production
+      DATABASE_NAME: postgres
+      DATABASE_USERNAME: postgres
+      DATABASE_PASSWORD: 123
+      DATABASE_PORT: 5432
+      DATABASE_HOST: db
+    networks:
+      - app-network
+    depends_on:
+      - db
+  db:
+    image: postgres:14
+    container_name: postgres-db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+    networks:
+      - app-network
+networks:
+  app-network:
+    driver: bridge

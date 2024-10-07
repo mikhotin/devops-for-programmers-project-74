@@ -32,3 +32,6 @@ lint-fix:
 
 test:
 	NODE_ENV=test npm test -s
+
+run-dev:
+	docker compose run --rm app make dev

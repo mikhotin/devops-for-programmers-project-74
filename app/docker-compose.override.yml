@@ -1,0 +1,9 @@
+services:
+  app:
+    extends:
+      file: docker-compose.yml
+      service: app
+    environment:
+      NODE_ENV: development
+    ports:
+      - "8000:8000"

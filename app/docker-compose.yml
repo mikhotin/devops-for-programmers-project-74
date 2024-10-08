@@ -3,7 +3,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.production
-    image: mikhotin
+    image: mikhotin/app
+    user: "mikhotin"
     ports:
       - "3000:3000"
     environment:

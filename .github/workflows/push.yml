@@ -33,5 +33,5 @@ jobs:
           push: true
           tags: ${{ env.APP_IMAGE_NAME }}
 
-      - name: Check
-        run: make ci
+      - name: Run Tests
+        run: make -C app ci

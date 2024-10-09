@@ -37,4 +37,4 @@ run-dev:
 	docker compose run --rm app make dev
 
 ci:
-	docker compose -f docker-compose.yml up
+	docker compose -f docker-compose.yml up --abort-on-container-exit --exit-code-from app

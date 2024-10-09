@@ -27,7 +27,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: app
-          file: Dockerfile.production
+          file: app/Dockerfile.production
           cache-from: type=registry,ref=${{ env.APP_IMAGE_NAME }}
           cache-to: type=inline
           push: true

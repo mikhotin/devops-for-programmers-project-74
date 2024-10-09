@@ -34,4 +34,4 @@ jobs:
           cache-from: type=registry,ref=${{ env.APP_IMAGE_NAME }}
           cache-to: type=inline
           push: true
-          tags: ${{ env.APP_IMAGE_NAME }}
+          tags: ${{ env.APP_IMAGE_NAME }}:latest

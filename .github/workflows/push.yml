@@ -26,7 +26,7 @@ jobs:
       - name: Build App
         uses: docker/build-push-action@v3
         with:
-          context: app/.
+          context: app/
           file: Dockerfile.production
           cache-from: type=registry,ref=${{ env.APP_IMAGE_NAME }}
           cache-to: type=inline

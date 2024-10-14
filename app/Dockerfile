@@ -2,9 +2,9 @@ FROM node:20.12.2
 
 WORKDIR /app
 
-COPY package.json /app
-
-COPY package-lock.json /app
+COPY package.json package.json
+COPY package-lock.json package-lock.json
+COPY .env.example .env
 
 RUN npm install
 
@@ -14,4 +14,4 @@ EXPOSE 8080
 
 RUN make build
 
-CMD ["npm", "start"]
+CMD make dev

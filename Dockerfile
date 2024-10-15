@@ -12,3 +12,5 @@ COPY app/. .
 EXPOSE 8080
 
 RUN make build
+
+CMD ["make", "dev"]

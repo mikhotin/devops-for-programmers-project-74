@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY app/package.json package.json
 COPY app/package-lock.json package-lock.json
-# COPY .env.example .env
+COPY .env.example .env
 
 RUN npm ci
 
@@ -14,7 +14,6 @@ EXPOSE 8080
 
 ENV NODE_ENV=production
 
-RUN prepare-env
 RUN make build
 
-CMD ["make", "dev"]
+CMD make start

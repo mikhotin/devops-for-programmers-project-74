@@ -17,4 +17,5 @@ services:
     volumes:
       - ./services/caddy/Caddyfile:/etc/caddy/Caddyfile
     depends_on:
-      - app
+      app:
+        condition: service_started

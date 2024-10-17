@@ -17,7 +17,6 @@ services:
 
   db:
     image: postgres:latest
-    container_name: postgres-database
     ports:
       - "5432:5432"
     environment:

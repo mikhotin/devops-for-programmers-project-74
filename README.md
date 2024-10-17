@@ -8,6 +8,11 @@
 make build-dev
 ```
 
+Запуск приложения dev
+```shell
+make dev
+```
+
 Билд приложения prod
 ```shell
 make build-prod

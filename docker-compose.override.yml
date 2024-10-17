@@ -3,9 +3,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    extends:
-      file: docker-compose.yml
-      service: app
     environment:
       NODE_ENV: development
     ports:

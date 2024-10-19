@@ -1,3 +1,7 @@
+networks:
+  proxy-network:
+    driver: bridge
+
 services:
   app:
     build:
@@ -8,9 +12,11 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - .:/app
+      - ./app:/app
+    networks:
+      - proxy-network
   caddy:
-    image: caddy:latest
+    image: caddy:2.8.4
     ports:
       - "80:80"
       - "443:443"
@@ -19,3 +25,5 @@ services:
     depends_on:
       app:
         condition: service_started
+    networks:
+      - proxy-network

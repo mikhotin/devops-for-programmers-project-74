@@ -31,7 +31,5 @@ jobs:
         with:
           context: ../../
           file: Dockerfile.production
-          cache-from: type=registry,ref=${{ env.APP_IMAGE_NAME }}
-          cache-to: type=inline
           push: true
           tags: ${{ env.APP_IMAGE_NAME }}:latest

@@ -3,17 +3,19 @@
 
 [![Actions Status](https://github.com/mikhotin/devops-for-programmers-project-74/actions/workflows/push.yml/badge.svg)](https://github.com/mikhotin/devops-for-programmers-project-74/actions)
 
-Билд приложения dev
+# Requirements
+- Docker
+- Docker-compose
+- Make
+- Git
+
+
+## Development
 ```shell
 make build-dev
 ```
 
-Запуск приложения dev
-```shell
-make dev
-```
-
-Билд приложения prod
+## Production
 ```shell
 make build-prod
 ```

@@ -26,7 +26,7 @@ jobs:
       - name: Build App
         uses: docker/build-push-action@v3
         with:
-          context: ../../
+          context: .
           file: Dockerfile.production
           push: true
           tags: ${{ env.APP_IMAGE_NAME }}:latest

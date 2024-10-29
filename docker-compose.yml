@@ -6,7 +6,6 @@ services:
     image: mikhotin/app
     ports:
       - "3000:3000"
-    command: npm run test
     environment:
       - DATABASE_HOST=${DATABASE_HOST-db}
       - DATABASE_NAME=${DATABASE_NAME-postgres}

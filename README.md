@@ -9,13 +9,28 @@
 - Make
 - Git
 
-
 ## Development
+
+build command:
+
 ```shell
 make build-dev
 ```
 
+run command:
+
+```shell
+make dev
+```
+
 ## Production
+
+build command:
 ```shell
 make build-prod
+```
+
+run command:
+```shell
+make prod
 ```

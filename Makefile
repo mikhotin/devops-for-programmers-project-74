@@ -9,3 +9,6 @@ build-dev:
 
 dev:
 	docker compose -f docker-compose.override.yml up -d
+
+prod:
+	docker compose -f docker-compose.yml up -d
